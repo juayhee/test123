@@ -1,0 +1,55 @@
+{
+    "exception": null,
+    "objectList": {
+        "myInfoExpenses": [
+            {
+                "id": 1,
+                "name": "Rent",
+                "value": 1200.00,
+                "listorder": 1
+            }
+        ],
+        "myInfoIncome": [
+            {
+                "id": 1,
+                "name": "Salary",
+                "value": 3500.00,
+                "listorder": 1
+            },
+            {
+                "id": 2,
+                "name": "Freelance",
+                "value": 1500.00,
+                "listorder": 2
+            }
+        ],
+        "myInfoSavings": [
+            {
+                "id": 1,
+                "name": "Emergency Fund",
+                "value": 2500.00,
+                "listorder": 1
+            },
+            {
+                "id": 2,
+                "name": "Vacation Fund",
+                "value": 1000.00,
+                "listorder": 2
+            }
+        ],
+        "myInfoInvestments": [
+            {
+                "id": 1,
+                "name": "Stocks",
+                "value": 7500.00,
+                "listorder": 1
+            },
+            {
+                "id": 2,
+                "name": "Bonds",
+                "value": 3000.00,
+                "listorder": 2
+            }
+        ]
+    }
+}
