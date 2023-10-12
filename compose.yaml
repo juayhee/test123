@@ -1,0 +1,16 @@
+services:
+  dev:
+    image: ubuntu-angular:latest
+    volumes:
+      - type: bind
+        source: ~/dev/angular-project
+        target: /app
+    command: bash
+    tty: true
+    stdin_open: true
+    ports: 
+    - target: 80
+      host_ip: 127.0.0.1
+      published: "8080"
+      protocol: tcp
+      mode: host
