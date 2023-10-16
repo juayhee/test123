@@ -18,19 +18,28 @@ badd +20 ~/dev/angular-project/Dockerfile
 badd +2 ~/dev/angular-project/.gitignore
 badd +6 ~/dev/angular-project/bin/container/start
 badd +5 bin/start
-badd +25 ~/dev/angular-project/app/.gitignore
+badd +1 ~/dev/angular-project/app/.gitignore
 badd +1 ~/dev/angular-project/src/index.html
 badd +1 ~/dev/angular-project/src/main.ts
-badd +1 ~/dev/angular-project/src/app/app.component.html
+badd +4 ~/dev/angular-project/src/app/app.component.html
 badd +1 ~/dev/angular-project/src/assets/sample.json
-badd +13 ~/dev/angular-project/src/app/services/json.service.ts
-badd +13 ~/dev/angular-project/src/app/app.component.ts
+badd +26 src/app/services/json.service.ts
+badd +36 src/app/app.component.ts
+badd +15 ~/dev/angular-project/src/app/app.module.ts
+badd +24 package.json
+badd +1 ~/dev/angular-project/src/app/app-routing.module.ts
+badd +21 tsconfig.json
+badd +1 ~/dev/angular-project/src/app/types/types.ts
+badd +9 ~/dev/angular-project/src/app/services/fuzzy-search.service.ts
+badd +0 ~/dev/angular-project/src/app/services/fuzzy.service.spec.ts
+badd +1 ~/dev/angular-project/src/app/services/fuzzy-search.service.spec.ts
 argglobal
 %argdel
-$argadd .
-edit ~/dev/angular-project/app/.gitignore
+$argadd ./
 argglobal
-balt ~/dev/angular-project/src/app/app.component.ts
+enew
+file oil:///Users/juayhee/dev/angular-project/src/app/
+balt ~/dev/angular-project/src/app/services/fuzzy-search.service.ts
 setlocal fdm=expr
 setlocal fde=nvim_treesitter$foldexpr()
 setlocal fmr={{{,}}}
@@ -39,12 +48,6 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 25 - ((24 * winheight(0) + 30) / 60)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 25
-normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
